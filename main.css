@@ -1,0 +1,157 @@
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+
+
+/* =================================== */
+.sect {
+    width: 100%;
+    /* height: 100vh; */
+    height: auto;
+    background-repeat: no-repeat;
+
+}
+
+.sect .inner {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sect1 {}
+
+.sect2 {}
+
+.sect3 {}
+
+.sect3 .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+    padding: 128px 0px;
+}
+
+.sect4 {}
+
+.sect5 {}
+
+/* =================================== */
+h2 {
+    font-size: 44px;
+}
+
+/* =================================== */
+.btn_wrap {
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: all 0.4s ease;
+
+}
+
+.btn_wrap.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn1 {
+    width: 210px !important;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+.btn_position1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+/* =================================== */
+footer {
+    width: 100%;
+    background: #e8e8e8;
+    padding: 32px;
+    color: #333333;
+}
+
+.footer-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-weight: bold;
+}
+
+/* =================================== */
+@media (min-width: 320px) and (max-width: 768px) {
+    .btn1 {
+        width: 130px !important;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .video1 {
+        width: 270px;
+        height: 480px;
+    }
+
+    .sect3 .inner {
+        gap: 16px;
+        padding: 32px 0px;
+    }
+}
