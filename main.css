@@ -24,10 +24,18 @@
     overflow: hidden;
 }
 
-.sect img {
+.sect .pimg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+.sect .mimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
 }
 
 .sect1 {}
@@ -150,8 +158,28 @@ footer {
         height: 480px;
     }
 
+    /* ============= */
+    .sect .pimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    .sect .mimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
     .sect3 .inner {
         gap: 16px;
         padding: 32px 0px;
     }
+
+    footer {
+        font-size: 12px;
+    }
+
 }
