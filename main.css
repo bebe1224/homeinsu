@@ -78,7 +78,7 @@ h2 {
 }
 
 .btn1 {
-    width: 210px !important;
+    width: 220px !important;
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
@@ -94,7 +94,7 @@ h2 {
     overflow: hidden;
 }
 
-.btn1::before {
+.btnHover1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -102,18 +102,42 @@ h2 {
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: #212121;
+    background-color: #333333;
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 250ms
 }
 
-button:hover {
-    color: #e8e8e8;
+.btnHover2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #FFDE00;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
 }
 
-button:hover::before {
+.btnHover1:hover {
+    color: #fafafa;
+}
+
+
+.btnHover2:hover {
+    color: #000000;
+}
+
+.btnHover1:hover::before {
+    width: 100%;
+}
+
+.btnHover2:hover::before {
     width: 100%;
 }
 
@@ -123,6 +147,51 @@ button:hover::before {
     transform: translate(-50%, -50%);
     position: fixed;
 }
+
+/* =============================== */
+
+/* 1. 이미지 기본 상태 (숨김 & 작게) */
+.btn_icon {
+    position: absolute;
+    right: 12px;
+    /* 나타날 위치 */
+    width: 32px;
+    /* 로고 크기 */
+    opacity: 0;
+    /* 처음엔 안보임 */
+    transform: scale(0) rotate(-45deg);
+    /* 작아진 상태에서 회전 */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* 튕기는 효과 */
+}
+
+/* 2. 버튼 호버 시 이미지 나타남 (커지면서 정방향) */
+.btn1:hover .btn_icon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* 3. 버튼 호버 시 글자를 살짝 왼쪽으로 밀어줌 (선택사항) */
+.btn1 span {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn1:hover span {
+    transform: translateX(-15px);
+}
+
+/* 4. 링크가 버튼 꽉 차게 설정 */
+.btn1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* =================================== */
 footer {
@@ -143,11 +212,6 @@ footer {
 
 /* =================================== */
 @media (min-width: 320px) and (max-width: 768px) {
-    .btn1 {
-        width: 130px !important;
-        padding: 8px;
-        font-size: 12px;
-    }
 
     h2 {
         font-size: 22px;
@@ -156,6 +220,11 @@ footer {
     .video1 {
         width: 270px;
         height: 480px;
+    }
+
+    /* ================ */
+    .btn_wrap {
+        flex-direction: column;
     }
 
     /* ============= */
@@ -179,7 +248,8 @@ footer {
     }
 
     footer {
-        font-size:9px;
+        font-size: 9px;
     }
+
 
 }
