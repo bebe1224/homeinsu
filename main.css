@@ -6,6 +6,10 @@
     color: red;
 }
 
+.wrap {
+    text-align: center;
+}
+
 
 
 /* =================================== */
@@ -37,6 +41,18 @@
     object-fit: cover;
     display: none;
 }
+
+.sect0_1 {
+    background-color: #FDEBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    padding: 64px 0px;
+}
+
+.sect0_1 {}
 
 .sect1 {}
 
