@@ -38,7 +38,8 @@
     font-weight: bold;
     position: absolute;
     right: 16px;
-    top: 6px;
+    top: 8px;
+    font-size: 21px;
 }
 
 .video_wrap .video_box:hover {
@@ -320,5 +321,9 @@ footer {
 
     .video_wrap .video_box:hover {
         transform: scale(1.025);
+    }
+
+    .video_wrap .video_box p {
+        font-size: 9px;
     }
 }
