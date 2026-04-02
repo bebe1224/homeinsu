@@ -11,6 +11,18 @@
     text-align: center;
 }
 
+.wrap p {
+    font-size: 24px;
+
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.wrap p {}
+
 .video_wrap {
     padding: 64px 0px;
     display: flex;
@@ -118,11 +130,8 @@
 
 .sect5 {}
 
-/* =================================== */
-h2 {
-    font-size: 44px;
-    /* font-family: 'Do Hyeon', sans-serif; */
-}
+
+
 
 /* =================================== */
 .btn_wrap {
